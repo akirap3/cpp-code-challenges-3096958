@@ -15,8 +15,16 @@
 bool is_palindrome(std::string str){
 
     // Write your code here
+    bool isPalindrome = true;
+    for(int i = 0; i <= (int)(str.length() / 2) && isPalindrome ; i++) {
+        if(tolower(str[i]) != tolower(str[str.length() - 1 - i])) {
+            isPalindrome = false;
+        } else {
+            isPalindrome = true;
+        }
+    }
 
-    return false;
+    return isPalindrome;
 }
 
 // Main function
